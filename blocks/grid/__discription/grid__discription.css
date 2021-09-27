@@ -1,0 +1,8 @@
+.grid__discription {
+  display: flex;
+  justify-content: space-between;
+  max-width: 246px;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 79px;
+}

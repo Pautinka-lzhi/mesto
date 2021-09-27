@@ -1,0 +1,15 @@
+.profil__date {
+  display: block;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .profil__date {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: auto;
+    text-align: center;
+  }
+}

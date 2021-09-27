@@ -1,0 +1,6 @@
+.grid__card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 361px;
+}

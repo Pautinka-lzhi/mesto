@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto Russia</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header page__header">
+      <img src="./image/header_logo.svg" alt="Логотип сайта" class="header__logo">
+    </header>
+    <main class="content">
+      <section class="profil page__profil">
+        <div class="profil__info">
+          <img src="./image/profil_photo.jpg" alt="Аватар" class="profil__avatar">
+          <div class="profil__date">
+            <h1 class="profil__name">Жак-Ив Кусто</h1>
+            <p class="profil__description">Исследователь океана</p>
+          </div>
+          <button class="profil__edit"></button>
+        </div>
+        <button class="profil__add"></button>
+      </section>
+      <section class="grid page__grid">
+        <div class="grid__card">
+          <img src="./image/grid_Karachaevsk.jpg" alt="Карачаевск" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Карачаевск</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+        <div class="grid__card">
+          <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Гора Эльбрус</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+        <div class="grid__card">
+          <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Домбай</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+        <div class="grid__card">
+          <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Гора Эльбрус</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+        <div class="grid__card">
+          <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Домбай</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+        <div class="grid__card">
+          <img src="./image/grid_Karachaevsk.jpg" alt=" Карачаево-Черкесия" class="grid__photo">
+          <div class="grid__discription">
+            <h2 class="grid__title">Карачаево-Черкесия</h2>
+            <button class="grid__button"></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer page__footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+
+    </footer>
+    <div class="popup">
+      <div class="popup__conteiner">
+        <button class="popup__close"></button>
+        <form class="popup__form">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <fieldset class="popup__fieldset">
+            <input type="text" name="firstname" placeholder="Жак-Ив Кусто" class="popup__input popup__input_form_name" required>
+            <input type="text" name="description" placeholder="Исследователь океана" class="popup__input popup__input_form_description" required>
+          </fieldset>
+          <button type="submit" class="popup__save">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>

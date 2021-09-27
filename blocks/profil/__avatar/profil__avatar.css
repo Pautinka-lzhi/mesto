@@ -1,0 +1,12 @@
+.profil__avatar {
+  max-height: 120px;
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  .profil__avatar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
