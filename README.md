@@ -23,4 +23,4 @@
 В СSS используется flexbox, grid, медиазапросы для адаптива
 
 * Ссылка на GitHub Pages
-
+https://pautinka-lzhi.github.io/mesto/
