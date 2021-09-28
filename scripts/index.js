@@ -24,11 +24,11 @@ function setProfileValue() {
 };
 
 function showPopup(evt) {
-    popup.classList.add('popup__opened');
+    popup.classList.add('popup_opened');
 };
 
 function closePopup(evt) {
-    popup.classList.remove('popup__opened');
+    popup.classList.remove('popup_opened');
 };
 
 formElement.addEventListener('submit', formSubmitHandler);
