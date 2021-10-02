@@ -22,51 +22,51 @@
             <h1 class="profil__name">Жак-Ив Кусто</h1>
             <p class="profil__description">Исследователь океана</p>
           </div>
-          <button class="profil__edit"></button>
+          <button type="button" class="profil__edit"></button>
         </div>
-        <button class="profil__add"></button>
+        <button type="button" class="profil__add"></button>
       </section>
       <section class="grid page__grid">
         <div class="grid__card">
           <img src="./image/grid_Karachaevsk.jpg" alt="Карачаевск" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Карачаевск</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
         <div class="grid__card">
           <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Гора Эльбрус</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
         <div class="grid__card">
           <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Домбай</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
         <div class="grid__card">
           <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Гора Эльбрус</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
         <div class="grid__card">
           <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Домбай</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
         <div class="grid__card">
           <img src="./image/grid_Karachaevsk.jpg" alt=" Карачаево-Черкесия" class="grid__photo">
           <div class="grid__discription">
             <h2 class="grid__title">Карачаево-Черкесия</h2>
-            <button class="grid__button"></button>
+            <button type="button" class="grid__button"></button>
           </div>
         </div>
       </section>
@@ -78,12 +78,12 @@
     </footer>
     <div class="popup">
       <div class="popup__conteiner">
-        <button class="popup__close"></button>
-        <form class="popup__form">
-          <h2 class="popup__title">Редактировать профиль</h2>
+        <button type="button" class="popup__close"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="profil_form" class="popup__form">
           <fieldset class="popup__fieldset">
-            <input type="text" name="firstname" placeholder="Жак-Ив Кусто" class="popup__input popup__input_form_name" required>
-            <input type="text" name="description" placeholder="Исследователь океана" class="popup__input popup__input_form_description" required>
+            <input type="text" name="firstname" placeholder="Ваше имя" class="popup__input popup__input_form_name" required>
+            <input type="text" name="description" placeholder="Профессия" class="popup__input popup__input_form_description" required>
           </fieldset>
           <button type="submit" class="popup__save">Сохранить</button>
         </form>
