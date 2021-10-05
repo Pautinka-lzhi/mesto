@@ -9,6 +9,8 @@ let profilDescription = document.querySelector('.profil__description');
 
 function showPopup(evt) {
     popup.classList.add('popup_opened');
+    nameInput.value = profilName.textContent;
+    descriptionInput.value = profilDescription.textContent;
 };
 
 function closePopup(evt) {
