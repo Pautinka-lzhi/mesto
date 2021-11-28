@@ -1,21 +1,21 @@
-const formElement = document.querySelector('.popup__form');
+const formProfileEdit = document.querySelector('.popup-profile__form');
 const formAddElement = document.querySelector('.popup-add__form');
 const popupProfilShow = document.querySelector('.profil__edit');
 const popupCardAddShow = document.querySelector('.profil__add');
-const popup = document.querySelector('.popup');
+const popupProfile = document.querySelector('.popup-profile');
 const popupAdd = document.querySelector('.popup-add');
 const popupImg = document.querySelector('.popup-img');
-const popupProfilClose = document.querySelector('.popup__close');
+const popupProfilClose = document.querySelector('.popup-profile__close');
 const popupCardAddClose = document.querySelector('.popup-add__close');
-const nameInput = popup.querySelector('.popup__input_form_name');
-const descriptionInput = popup.querySelector('.popup__input_form_description');
+const popupImgClose = document.querySelector('.popup-img__close');
+const nameInput = document.querySelector('.popup-profile__input_form_name');
+const descriptionInput = document.querySelector('.popup-profile__input_form_description');
 const placeInput = document.querySelector('.popup-add__input_form_place');
 const linkInput = document.querySelector('.popup-add__input_form_link');
 const profilName = document.querySelector('.profil__name');
 const profilDescription = document.querySelector('.profil__description');
 const template = document.querySelector('#template');
 const sectionPageTemplate = document.querySelector('.page__template');
-const popupImgClose = document.querySelector('.popup-img__close');
 
 const initialCards = [
   {
@@ -46,23 +46,25 @@ const initialCards = [
 
 const popupOpenImg = document.querySelector('.popup-img__photo');
 const popupOpenTitle = document.querySelector('.popup-img__title');
-
+const popupOpenAlt = document.querySelector('.popup-img__photo');
 
 const createTaskDomNode = (item) => {
   const templateElement = template.content.querySelector('.template__card').cloneNode(true);
 
   const nameOpen = templateElement.querySelector('.template__title');
   const image = templateElement.querySelector('.template__photo');
+  const imageAlt = templateElement.querySelector('.template__photo');
   nameOpen.textContent = item.name;
   image.src = item.link;
-  
+  imageAlt.alt = item.name;
 
 
   //открытие фотографии
   image.addEventListener('click', ()=> {
-    popupImg.classList.add('popup-img_opened');
+    openPopup(popupImg);
     popupOpenTitle.textContent = nameOpen.textContent;
     popupOpenImg.src = image.src;
+    popupOpenAlt.alt = imageAlt.alt;
   });
 
   //кнопка удаления
@@ -96,6 +98,10 @@ const formAddSubmitHandler = (evt) => {
   
   const taskName = createTaskDomNode({ name: inputValuePlace, link: inputValueLink });
   sectionPageTemplate.prepend(taskName);
+
+  placeInput.value = '';
+  linkInput.value = '';
+
   closePopupAddCard();
 }
 
@@ -104,31 +110,41 @@ formAddElement.addEventListener('submit', formAddSubmitHandler);
 
 sectionPageTemplate.append(...result);
 
+// функция открытия для всех Popup
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+};
+
+// функция закрытия для всех Popup
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+}
 
 //функция открытия Popup - редактор профиля 
 function showPopupProfil() {
-  popup.classList.add('popup_opened');
+  openPopup(popupProfile);
   nameInput.value = profilName.textContent;
   descriptionInput.value = profilDescription.textContent;
 };
 
 //функция закрытия Popup - редактор профиля 
 function closePopupProfil() {
-  popup.classList.remove('popup_opened');
+  closePopup(popupProfile);
 };
 
 //функция открытия Popup - добавления карточки 
 function showPopupAddCard() {
-  popupAdd.classList.add('popup-add_opened');
+  openPopup(popupAdd);
 };
 
 //функция закрытия Popup - добавления карточки 
 function closePopupAddCard() {
-  popupAdd.classList.remove('popup-add_opened');
+  closePopup(popupAdd);
 };
 
+//функция закрытия Popup - просмотр фотографии
 function closeImgPopup () {
-  popupImg.classList.remove('popup-img_opened');
+  closePopup(popupImg);  
 };
 
 popupProfilShow.addEventListener('click', showPopupProfil);
@@ -144,4 +160,4 @@ function formSubmitHandler(evt) {
   closePopupProfil();
 };
 
-formElement.addEventListener('submit', formSubmitHandler);
+formProfileEdit.addEventListener('submit', formSubmitHandler);

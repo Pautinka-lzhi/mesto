@@ -8,7 +8,7 @@
   <title>Mesto Russia</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
-<body>
+<body class="root">
   <div class="page">
     <header class="header page__header">
       <img src="./image/header_logo.svg" alt="Логотип сайта" class="header__logo">
@@ -31,24 +31,24 @@
     <footer class="footer page__footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
-      <div class="popup__conteiner">
-        <button type="button" class="popup__close"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form name="profil_form" class="popup__form">
-          <fieldset class="popup__fieldset">
-            <input type="text" name="firstname" placeholder="Ваше имя" class="popup__input popup__input_form_name"
+    <div class="popup popup-profile">
+      <div class="popup-profile__conteiner">
+        <button type="button" class="popup_closed popup-profile__close"></button>
+        <h2 class="popup-profile__title">Редактировать профиль</h2>
+        <form name="profil_form" class="popup-profile__form">
+          <fieldset class="popup-profile__fieldset">
+            <input type="text" name="firstname" placeholder="Ваше имя" class="popup-profile__input popup-profile__input_form_name"
               required>
-            <input type="text" name="description" placeholder="Профессия" class="popup__input popup__input_form_description" required>
+            <input type="text" name="description" placeholder="Профессия" class="popup-profile__input popup-profile__input_form_description" required>
           </fieldset>
-          <button type="submit" class="popup__save">Сохранить</button>
+          <button type="submit" class="popup-profile__save">Сохранить</button>
         </form>
       </div>
     </div>
   </div>
-  <div class="popup-add">
+  <div class="popup popup-add">
     <div class="popup-add__conteiner">
-      <button type="button" class="popup-add__close"></button>
+      <button type="button" class="popup_closed popup-add__close"></button>
       <h2 class="popup-add__title">Новое место</h2>
       <form name="add_form" class="popup-add__form">
         <fieldset class="popup-add__fieldset">
@@ -59,16 +59,16 @@
       </form>
     </div>    
   </div>
-  <div class="popup-img">
+  <div class="popup popup-img">
     <div class="popup-img__coneiner">
-      <img class="popup-img__photo" alt="фотография местности" src="№">
-      <button type="button" class="popup-img__close"></button>
+      <img class="popup-img__photo" alt="" src="#">
+      <button type="button" class="popup_closed popup-img__close"></button>
       <p class="popup-img__title"></p>
     </div>
   </div>
   <template id="template">
     <div class="template__card">
-      <img src="#" class="template__photo" alt="Фотография места">
+      <img src="#" class="template__photo" alt="">
       <button type="button" class="template__delete"></button>
       <div class="template__discription">
         <h2 class="template__title"></h2>
