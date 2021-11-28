@@ -8,7 +8,6 @@
   <title>Mesto Russia</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
-
 <body>
   <div class="page">
     <header class="header page__header">
@@ -26,55 +25,11 @@
         </div>
         <button type="button" class="profil__add"></button>
       </section>
-      <section class="grid page__grid">
-        <div class="grid__card">
-          <img src="./image/grid_Karachaevsk.jpg" alt="Карачаевск" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Карачаевск</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
-        <div class="grid__card">
-          <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Гора Эльбрус</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
-        <div class="grid__card">
-          <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Домбай</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
-        <div class="grid__card">
-          <img src="./image/grid_Elbrus.jpg" alt="Гора Эльбрус" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Гора Эльбрус</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
-        <div class="grid__card">
-          <img src="./image/grid_Dombai.jpg" alt="Домбай" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Домбай</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
-        <div class="grid__card">
-          <img src="./image/grid_Karachaevsk.jpg" alt=" Карачаево-Черкесия" class="grid__photo">
-          <div class="grid__discription">
-            <h2 class="grid__title">Карачаево-Черкесия</h2>
-            <button type="button" class="grid__button"></button>
-          </div>
-        </div>
+      <section class="page__template">
       </section>
-
     </main>
     <footer class="footer page__footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-
     </footer>
     <div class="popup">
       <div class="popup__conteiner">
@@ -82,16 +37,45 @@
         <h2 class="popup__title">Редактировать профиль</h2>
         <form name="profil_form" class="popup__form">
           <fieldset class="popup__fieldset">
-            <input type="text" name="firstname" placeholder="Ваше имя" class="popup__input popup__input_form_name" required>
+            <input type="text" name="firstname" placeholder="Ваше имя" class="popup__input popup__input_form_name"
+              required>
             <input type="text" name="description" placeholder="Профессия" class="popup__input popup__input_form_description" required>
           </fieldset>
           <button type="submit" class="popup__save">Сохранить</button>
         </form>
       </div>
     </div>
-
   </div>
+  <div class="popup-add">
+    <div class="popup-add__conteiner">
+      <button type="button" class="popup-add__close"></button>
+      <h2 class="popup-add__title">Новое место</h2>
+      <form name="add_form" class="popup-add__form">
+        <fieldset class="popup-add__fieldset">
+          <input type="text" name="place" placeholder="Название" class="popup-add__input popup-add__input_form_place" required>
+          <input type="text" name="link" placeholder="Ссылка на картинку" class="popup-add__input popup-add__input_form_link" required>
+        </fieldset>
+        <button type="submit" class="popup-add__save">Создать</button>
+      </form>
+    </div>    
+  </div>
+  <div class="popup-img">
+    <div class="popup-img__coneiner">
+      <img class="popup-img__photo" alt="фотография местности" src="№">
+      <button type="button" class="popup-img__close"></button>
+      <p class="popup-img__title"></p>
+    </div>
+  </div>
+  <template id="template">
+    <div class="template__card">
+      <img src="#" class="template__photo" alt="Фотография места">
+      <button type="button" class="template__delete"></button>
+      <div class="template__discription">
+        <h2 class="template__title"></h2>
+        <button type="button" class="template__like"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
-
 </html>
