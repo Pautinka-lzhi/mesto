@@ -1,0 +1,18 @@
+.template__delete {
+  min-height: 19px;
+  min-width: 18px;
+  background-image: url(../../../image/Delete_button.svg);
+  border: none;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+}
+
+.template__delete:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

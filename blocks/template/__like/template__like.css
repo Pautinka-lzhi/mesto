@@ -1,4 +1,4 @@
-.grid__button {
+.template__like {
   min-height: 19px;
   min-width: 22px;
   background-image: url(../../../image/like_disabled.svg);
@@ -9,7 +9,7 @@
   background-color: #FFFFFF;
 }
 
-.grid__button:hover {
+.template__like:hover {
   background-image: url(../../../image/like_hover.svg);
   cursor: pointer;
 }

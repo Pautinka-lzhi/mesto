@@ -1,4 +1,5 @@
-.popup {
+.popup-add {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   position: fixed;
   align-items: center;
   justify-content: center;
