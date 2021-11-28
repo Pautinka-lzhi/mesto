@@ -46,5 +46,5 @@
 @import url('../blocks/popup-profile/__save/popup-profile__save.css');
 @import url('../blocks/popup-profile/__title/popup-profile__title.css');
 @import url('../blocks/popup/popup.css');
-@import url('../blocks/popup/_closed/popup_closed.css');
+@import url('../blocks/popup/__closed/popup__closed.css');
 @import url('../blocks/popup/_opened/popup_opened.css');

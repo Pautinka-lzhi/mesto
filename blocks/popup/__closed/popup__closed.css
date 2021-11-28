@@ -1,4 +1,4 @@
-.popup_closed {
+.popup__closed {
   width: 32px;
   height: 32px;
   border: none;
@@ -8,12 +8,12 @@
   background-color: transparent;
 }
 
-.popup_closed:hover {
+.popup__closed:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.popup_closed::before {
+.popup__closed::before {
   position: absolute;
   content: '';
   height: 37px;
@@ -22,7 +22,7 @@
   transform: rotate(45deg);
 }
 
-.popup_closed::after {
+.popup__closed::after {
   position: absolute;
   content: '';
   height: 37px;
@@ -32,19 +32,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  .popup_closed {
+  .popup__closed {
     width: 20px;
     height: 20px;
     top: -36px;
     right: 0;
   }
 
-  .popup_closed::before {
+  .popup__closed::before {
     height: 21px;
     border: 1px solid #fff;
   }
 
-  .popup_closed::after {
+  .popup__closed::after {
     height: 21px;
     border: 1px solid #fff;
   }
