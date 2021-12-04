@@ -16,6 +16,8 @@ const profilName = document.querySelector('.profil__name');
 const profilDescription = document.querySelector('.profil__description');
 const template = document.querySelector('#template');
 const sectionPageTemplate = document.querySelector('.page__template');
+const saveButtonCards = document.querySelector('.popup__button-save');
+
 
 const initialCards = [
   {
@@ -113,12 +115,30 @@ sectionPageTemplate.append(...result);
 // функция открытия для всех Popup
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', pressEscape);
+  document.addEventListener('mousedown', clickOverlay);
 };
 
 // функция закрытия для всех Popup
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', pressEscape);
+  document.removeEventListener('mousedown', clickOverlay);
 }
+
+function pressEscape (evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  };
+};
+
+function clickOverlay (evt) {
+  const openedPopup = document.querySelector('.popup_opened');
+  if (evt.target === openedPopup) {
+    closePopup(openedPopup);
+  };
+};
 
 //функция открытия Popup - редактор профиля 
 function showPopupProfil() {

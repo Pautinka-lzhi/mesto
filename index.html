@@ -32,30 +32,64 @@
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
     <div class="popup popup-profile">
-      <div class="popup-profile__conteiner">
+      <div class="popup__conteiner popup-profile__conteiner">
         <button type="button" class="popup__closed popup-profile__close"></button>
-        <h2 class="popup-profile__title">Редактировать профиль</h2>
-        <form name="profil_form" class="popup-profile__form">
+        <h2 class="popup__title popup-profile__title">Редактировать профиль</h2>
+        <form name="profil_form" class="popup__form popup-profile__form" novalidate>
           <fieldset class="popup-profile__fieldset">
-            <input type="text" name="firstname" placeholder="Ваше имя" class="popup-profile__input popup-profile__input_form_name"
-              required>
-            <input type="text" name="description" placeholder="Профессия" class="popup-profile__input popup-profile__input_form_description" required>
+            <input 
+            type="text"
+            id="firstname"
+            name="firstname" 
+            placeholder="Ваше имя" 
+            class="popup__input popup-profile__input popup-profile__input_form_name" 
+            required 
+            minlength="2" 
+            maxlength="40">
+            <span id="firstname-error" class="popup__error"></span>            
+            <input 
+            type="text" 
+            id="description"
+            name="description" 
+            placeholder="Профессия" 
+            class="popup__input popup-profile__input popup-profile__input_form_description" 
+            required 
+            minlength="2" 
+            maxlength="200">
+            <span id="description-error" class="popup__error"></span>
+
           </fieldset>
-          <button type="submit" class="popup-profile__save">Сохранить</button>
+          <button type="submit" class="popup__button-save popup__button-save_inactive">Сохранить</button>
         </form>
       </div>
     </div>
   </div>
   <div class="popup popup-add">
-    <div class="popup-add__conteiner">
+    <div class="popup__conteiner popup-add__conteiner">
       <button type="button" class="popup__closed popup-add__close"></button>
-      <h2 class="popup-add__title">Новое место</h2>
-      <form name="add_form" class="popup-add__form">
+      <h2 class="popup__title popup-add__title">Новое место</h2>
+      <form name="add_form" class="popup__form popup-add__form" novalidate>
         <fieldset class="popup-add__fieldset">
-          <input type="text" name="place" placeholder="Название" class="popup-add__input popup-add__input_form_place" required>
-          <input type="text" name="link" placeholder="Ссылка на картинку" class="popup-add__input popup-add__input_form_link" required>
+          <input 
+          type="text"
+          id="place"
+          name="place" 
+          placeholder="Название" 
+          class="popup__input popup-add__input popup-add__input_form_place" 
+          required 
+          minlength="2" 
+          maxlength="30">
+          <span id="place-error" class="popup__error"></span>
+          <input 
+          type="url"
+          id="link"
+          name="link" 
+          placeholder="Ссылка на картинку" 
+          class="popup__input popup-add__input popup-add__input_form_link" 
+          required>
+          <span id="link-error" class="popup__error"></span>
         </fieldset>
-        <button type="submit" class="popup-add__save">Создать</button>
+        <button type="submit" class="popup__button-save popup__button-save_inactive">Создать</button>
       </form>
     </div>    
   </div>
@@ -76,6 +110,7 @@
       </div>
     </div>
   </template>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
