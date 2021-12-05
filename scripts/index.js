@@ -16,8 +16,7 @@ const profilName = document.querySelector('.profil__name');
 const profilDescription = document.querySelector('.profil__description');
 const template = document.querySelector('#template');
 const sectionPageTemplate = document.querySelector('.page__template');
-const saveButtonCards = document.querySelector('.popup__button-save');
-
+const saveButtonCards = document.querySelector('.popup-add__button-save');
 
 const initialCards = [
   {
@@ -92,7 +91,7 @@ const result = initialCards.map((item) => {
 
 
 
-const formAddSubmitHandler = (evt) => {
+const handleFormAddSubmit = (evt) => {
   evt.preventDefault();
 
   const inputValuePlace = placeInput.value;
@@ -103,12 +102,12 @@ const formAddSubmitHandler = (evt) => {
 
   placeInput.value = '';
   linkInput.value = '';
-
   closePopupAddCard();
-}
+  toggleButtonState(formAddElement, saveButtonCards, 'popup__button-save_inactive');
+};
 
 
-formAddElement.addEventListener('submit', formAddSubmitHandler);
+formAddElement.addEventListener('submit', handleFormAddSubmit);
 
 sectionPageTemplate.append(...result);
 
@@ -116,7 +115,7 @@ sectionPageTemplate.append(...result);
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', pressEscape);
-  document.addEventListener('mousedown', clickOverlay);
+  popup.addEventListener('mousedown', clickOverlay);
 };
 
 // функция закрытия для всех Popup
@@ -173,11 +172,11 @@ popupCardAddShow.addEventListener('click', showPopupAddCard);
 popupCardAddClose.addEventListener('click', closePopupAddCard);
 popupImgClose.addEventListener('click', closeImgPopup);
 
-function formSubmitHandler(evt) {
+function handleFormSubmit(evt) {
   evt.preventDefault();
   profilName.textContent = nameInput.value;
   profilDescription.textContent = descriptionInput.value;
   closePopupProfil();
 };
 
-formProfileEdit.addEventListener('submit', formSubmitHandler);
+formProfileEdit.addEventListener('submit', handleFormSubmit);
