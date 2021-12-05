@@ -18,6 +18,16 @@ const template = document.querySelector('#template');
 const sectionPageTemplate = document.querySelector('.page__template');
 const saveButtonCards = document.querySelector('.popup-add__button-save');
 
+const validationConfig = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button-save',
+  inactiveButtonClass: 'popup__button-save_inactive',
+  inputErrorClass: 'popup__input_error',
+  errorClass: 'popup__error_active'
+};
+
+enableValidation(validationConfig);
 const initialCards = [
   {
     name: 'Архыз',
@@ -122,7 +132,7 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', pressEscape);
-  document.removeEventListener('mousedown', clickOverlay);
+  popup.removeEventListener('mousedown', clickOverlay);
 }
 
 function pressEscape (evt) {

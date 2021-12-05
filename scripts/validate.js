@@ -27,15 +27,6 @@ const toggleButtonState = (formElement, buttonElement, inactiveButtonClass) => {
   buttonElement.classList.toggle(inactiveButtonClass, !isFormValid);
 };
 
-const validationConfig = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: 'popup__button-save_inactive',
-  inputErrorClass: 'popup__input_error',
-  errorClass: 'popup__error_active'
-};
-
 const setEventListeners = (formElement, {inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass}) => {
   formElement.addEventListener('submit', evt => evt.preventDefault());
   const inputList = Array.from(formElement.querySelectorAll(inputSelector));
@@ -66,5 +57,3 @@ const enableValidation = (config) => {
     setEventListeners(form, newObgect);
   });
 };
-
-enableValidation(validationConfig);
